@@ -3,7 +3,7 @@
 
 echo Instalando Certificado y configurando NGINX para el dominio $1 con el correo $2
 sleep 5s
-
+apt install nginx -y
 set -o nounset
 set -o errexit
  
