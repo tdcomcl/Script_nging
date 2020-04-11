@@ -86,6 +86,7 @@ echo Generando archivo de configuracion para NGINX para el dominio $1   ********
 sleep 3s
 
 #######  FALTA WGET DE ARCCHIVO DOMINIO.COM
+wget https://raw.githubusercontent.com/tdcomcl/Script_nging/master/dominio.com
 chmod +x dominio.com
 
 
