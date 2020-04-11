@@ -1,8 +1,4 @@
-
 # !/bin/bash
-
-
-
 echo Instalando Certificado y configurando NGINX para el dominio $1 con el correo $2
 sleep 5s
 apt install nginx -y
@@ -96,8 +92,8 @@ echo "***************************************************"
 sleep 5s
 
 
-cp dominio.com /etc/nginx/sites-available/$1
-ln -s /etc/nginx/sites-available/$1 /etc/nginx/sites-enabled/$1
+mv dominio.com /etc/nginx/sites-available/$1
+
 
 # **************** Change Variables Here ************
 startdirectory="/etc/nginx/sites-available/$1"
@@ -111,9 +107,10 @@ i=0;
       cp $file $file.bak
       sed -e "s/$searchterm/$replaceterm/ig" $file > tempfile.tmp
       mv tempfile.tmp $file
-	/etc/init.d/nginx restart
-	rm dominio.com configuracion_SSL.sh
-	echo " *** Hemos terminado! *** NGINX esta configurado https://$1 ******"
+      ln -s /etc/nginx/sites-available/$1 /etc/nginx/sites-enabled/$1
+      /etc/init.d/nginx restart
+      rm configuracion_SSL.sh
+      echo " *** Hemos terminado! *** NGINX esta configurado https://$1 ******"
 	
     let i++;
 
