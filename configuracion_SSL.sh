@@ -113,7 +113,7 @@ i=0;
       mv tempfile.tmp $file
 	/etc/init.d/nginx restart
 	rm dominio.com configuracion_SSL.sh
-	echo " *** Hemos terminado! *** NGINX esta configurado https://$1 ******
+	echo " *** Hemos terminado! *** NGINX esta configurado https://$1 ******"
 	
     let i++;
 
