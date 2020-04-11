@@ -8,5 +8,5 @@ wget https://raw.githubusercontent.com/tdcomcl/Script_nging/master/configuracion
 chmod +x configuracion_SSL.sh
 
 
-configuracion_SSL.sh MIdomino MIcorreo
+./configuracion_SSL.sh MIdomino MIcorreo
 
